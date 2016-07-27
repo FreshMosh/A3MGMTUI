@@ -15,9 +15,8 @@ from tkinter import *
 from tkinter import Tk
 from tkinter.filedialog import askopenfilenames
 
-class app():
+class server():
     def __init__(self):
-        root = Tk()
         self.config = ConfigParser() # Create a ConfigParser object called config
         self.config.read("config.ini") # Read the confi file to the config object
         ## Steam Standard Settings
@@ -59,9 +58,14 @@ class app():
     def server_update(self, instance):
         """Updates one Instance"""
 
+class app(server):
+    def __init__(self, server):
+        root = Tk()
 
+        root.grid()
 
+app(server)
 
-Tk() # we don't want a full GUI, so keep the root window from appearing
-filename = askopenfilenames() # show an "Open" dialog box and return the path to the selected file
-print(filename)
+#Tk() # we don't want a full GUI, so keep the root window from appearing
+#filename = askopenfilenames() # show an "Open" dialog box and return the path to the selected file
+#print(filename)
