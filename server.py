@@ -64,7 +64,8 @@ class app(server):
 
         root.grid()
 
-app(server)
+if __name__ == '__main__':
+    app(server)
 
 #Tk() # we don't want a full GUI, so keep the root window from appearing
 #filename = askopenfilenames() # show an "Open" dialog box and return the path to the selected file
