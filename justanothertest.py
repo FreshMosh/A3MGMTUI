@@ -43,7 +43,7 @@ class SampleApp(tk.Tk):
 if __name__ == "__main__":
     app = SampleApp()
     app.mainloop()
-
+"""WTF IS THIS """
 
 def on_buttonpress():
     subroot = Tk()
