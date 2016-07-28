@@ -43,3 +43,16 @@ class SampleApp(tk.Tk):
 if __name__ == "__main__":
     app = SampleApp()
     app.mainloop()
+
+
+def on_buttonpress():
+    subroot = Tk()
+    button1 = ttk.Button(subroot, text="Apply")
+    button2 = ttk.Button(subroot, text="Change Mission")
+    list = ['Mission1', 'Mission2', 'Mission3']
+    listbox1 = tkinter.Listbox(subroot)
+    for i, item in enumerate(list):
+        listbox1.insert(i, item)
+    button1.grid(column=0,row=0)
+    button2.grid(column=1,row=0)
+    listbox1.grid(columnspan=2,row=1)
