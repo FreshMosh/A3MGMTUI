@@ -55,7 +55,7 @@ class appgui():
         whitelist = string.ascii_letters + string.digits + ' -./'
         new_s = ''.join(c for c in text if c in whitelist)
         return str(new_s)
-tkinter.Fr
+
 
     def create_buttons(self):
         self.button1 = ttk.Button(self.root, text="Instanz 1", command=lambda : self.dosomething(), default="disabled")
