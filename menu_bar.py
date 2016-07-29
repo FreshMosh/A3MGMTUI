@@ -1,14 +1,9 @@
 from tkinter import *
 
-
 def donothing():
     filewin = Toplevel(root)
     button = Button(filewin, text="Do nothing button")
     button.pack()
-
-
-root = Tk()
-
 
 def menus(root):
     menubar = Menu(root)
@@ -43,6 +38,9 @@ def menus(root):
     root.config(menu=menubar)
     return root
 
-menus(root)
-root.mainloop()
+if __name__ == '__main__':
+    root = Tk()
+    root.title("Sample Menu Bar")
+    menus(root)
+    root.mainloop()
 
